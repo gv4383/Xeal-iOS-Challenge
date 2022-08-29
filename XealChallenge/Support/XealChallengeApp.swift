@@ -12,6 +12,7 @@ struct XealChallengeApp: App {
     var body: some Scene {
         WindowGroup {
             ReloadFundsView()
+                .preferredColorScheme(.dark)
         }
     }
 }

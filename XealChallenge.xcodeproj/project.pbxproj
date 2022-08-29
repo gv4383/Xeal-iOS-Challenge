@@ -11,6 +11,14 @@
 		B933871628BD11FF009D34A7 /* ReloadFundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B933871528BD11FF009D34A7 /* ReloadFundsView.swift */; };
 		B933871828BD1202009D34A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B933871728BD1202009D34A7 /* Assets.xcassets */; };
 		B933871B28BD1202009D34A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B933871A28BD1202009D34A7 /* Preview Assets.xcassets */; };
+		B933872928BD4953009D34A7 /* Mont-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B933872228BD4953009D34A7 /* Mont-SemiBold.otf */; };
+		B933872A28BD4953009D34A7 /* Mont-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B933872328BD4953009D34A7 /* Mont-Regular.otf */; };
+		B933872B28BD4953009D34A7 /* Mont-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = B933872428BD4953009D34A7 /* Mont-Thin.otf */; };
+		B933872C28BD4953009D34A7 /* Mont-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B933872528BD4953009D34A7 /* Mont-Bold.otf */; };
+		B933872D28BD4953009D34A7 /* Mont-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = B933872628BD4953009D34A7 /* Mont-Black.otf */; };
+		B933872E28BD4953009D34A7 /* Mont-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B933872728BD4953009D34A7 /* Mont-Light.otf */; };
+		B933872F28BD4953009D34A7 /* Mont-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = B933872828BD4953009D34A7 /* Mont-ExtraLight.otf */; };
+		B933873528BD4FFE009D34A7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B933873428BD4FFE009D34A7 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,15 @@
 		B933871528BD11FF009D34A7 /* ReloadFundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadFundsView.swift; sourceTree = "<group>"; };
 		B933871728BD1202009D34A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B933871A28BD1202009D34A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B933872228BD4953009D34A7 /* Mont-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mont-SemiBold.otf"; sourceTree = "<group>"; };
+		B933872328BD4953009D34A7 /* Mont-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mont-Regular.otf"; sourceTree = "<group>"; };
+		B933872428BD4953009D34A7 /* Mont-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mont-Thin.otf"; sourceTree = "<group>"; };
+		B933872528BD4953009D34A7 /* Mont-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mont-Bold.otf"; sourceTree = "<group>"; };
+		B933872628BD4953009D34A7 /* Mont-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mont-Black.otf"; sourceTree = "<group>"; };
+		B933872728BD4953009D34A7 /* Mont-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mont-Light.otf"; sourceTree = "<group>"; };
+		B933872828BD4953009D34A7 /* Mont-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mont-ExtraLight.otf"; sourceTree = "<group>"; };
+		B933873228BD4BF2009D34A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B933873428BD4FFE009D34A7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +68,12 @@
 		B933871228BD11FF009D34A7 /* XealChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				B933871328BD11FF009D34A7 /* XealChallengeApp.swift */,
-				B933871528BD11FF009D34A7 /* ReloadFundsView.swift */,
-				B933871728BD1202009D34A7 /* Assets.xcassets */,
+				B933873228BD4BF2009D34A7 /* Info.plist */,
+				B933872128BD4914009D34A7 /* Fonts */,
 				B933871928BD1202009D34A7 /* Preview Content */,
+				B933873128BD498A009D34A7 /* Screens */,
+				B933873028BD4978009D34A7 /* Support */,
+				B933873328BD4FEC009D34A7 /* Utilities */,
 			);
 			path = XealChallenge;
 			sourceTree = "<group>";
@@ -65,6 +84,45 @@
 				B933871A28BD1202009D34A7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B933872128BD4914009D34A7 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B933872628BD4953009D34A7 /* Mont-Black.otf */,
+				B933872528BD4953009D34A7 /* Mont-Bold.otf */,
+				B933872828BD4953009D34A7 /* Mont-ExtraLight.otf */,
+				B933872728BD4953009D34A7 /* Mont-Light.otf */,
+				B933872328BD4953009D34A7 /* Mont-Regular.otf */,
+				B933872228BD4953009D34A7 /* Mont-SemiBold.otf */,
+				B933872428BD4953009D34A7 /* Mont-Thin.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B933873028BD4978009D34A7 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				B933871328BD11FF009D34A7 /* XealChallengeApp.swift */,
+				B933871728BD1202009D34A7 /* Assets.xcassets */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		B933873128BD498A009D34A7 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B933871528BD11FF009D34A7 /* ReloadFundsView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B933873328BD4FEC009D34A7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B933873428BD4FFE009D34A7 /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +183,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B933872E28BD4953009D34A7 /* Mont-Light.otf in Resources */,
+				B933872D28BD4953009D34A7 /* Mont-Black.otf in Resources */,
+				B933872A28BD4953009D34A7 /* Mont-Regular.otf in Resources */,
 				B933871B28BD1202009D34A7 /* Preview Assets.xcassets in Resources */,
+				B933872B28BD4953009D34A7 /* Mont-Thin.otf in Resources */,
+				B933872928BD4953009D34A7 /* Mont-SemiBold.otf in Resources */,
+				B933872F28BD4953009D34A7 /* Mont-ExtraLight.otf in Resources */,
+				B933872C28BD4953009D34A7 /* Mont-Bold.otf in Resources */,
 				B933871828BD1202009D34A7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +204,7 @@
 			files = (
 				B933871628BD11FF009D34A7 /* ReloadFundsView.swift in Sources */,
 				B933871428BD11FF009D34A7 /* XealChallengeApp.swift in Sources */,
+				B933873528BD4FFE009D34A7 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +336,9 @@
 				DEVELOPMENT_TEAM = 2ABK4QQ3NL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = XealChallenge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -299,9 +365,9 @@
 				DEVELOPMENT_TEAM = 2ABK4QQ3NL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = XealChallenge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
