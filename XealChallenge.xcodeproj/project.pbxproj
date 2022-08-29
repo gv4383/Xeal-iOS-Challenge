@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B933871428BD11FF009D34A7 /* XealChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B933871328BD11FF009D34A7 /* XealChallengeApp.swift */; };
-		B933871628BD11FF009D34A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B933871528BD11FF009D34A7 /* ContentView.swift */; };
+		B933871628BD11FF009D34A7 /* ReloadFundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B933871528BD11FF009D34A7 /* ReloadFundsView.swift */; };
 		B933871828BD1202009D34A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B933871728BD1202009D34A7 /* Assets.xcassets */; };
 		B933871B28BD1202009D34A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B933871A28BD1202009D34A7 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		B933871028BD11FF009D34A7 /* XealChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XealChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B933871328BD11FF009D34A7 /* XealChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XealChallengeApp.swift; sourceTree = "<group>"; };
-		B933871528BD11FF009D34A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B933871528BD11FF009D34A7 /* ReloadFundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadFundsView.swift; sourceTree = "<group>"; };
 		B933871728BD1202009D34A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B933871A28BD1202009D34A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				B933871328BD11FF009D34A7 /* XealChallengeApp.swift */,
-				B933871528BD11FF009D34A7 /* ContentView.swift */,
+				B933871528BD11FF009D34A7 /* ReloadFundsView.swift */,
 				B933871728BD1202009D34A7 /* Assets.xcassets */,
 				B933871928BD1202009D34A7 /* Preview Content */,
 			);
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B933871628BD11FF009D34A7 /* ContentView.swift in Sources */,
+				B933871628BD11FF009D34A7 /* ReloadFundsView.swift in Sources */,
 				B933871428BD11FF009D34A7 /* XealChallengeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

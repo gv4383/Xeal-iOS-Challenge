@@ -11,7 +11,7 @@ import SwiftUI
 struct XealChallengeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ReloadFundsView()
         }
     }
 }
