@@ -19,6 +19,9 @@
 		B933872E28BD4953009D34A7 /* Mont-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B933872728BD4953009D34A7 /* Mont-Light.otf */; };
 		B933872F28BD4953009D34A7 /* Mont-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = B933872828BD4953009D34A7 /* Mont-ExtraLight.otf */; };
 		B933873528BD4FFE009D34A7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B933873428BD4FFE009D34A7 /* Constants.swift */; };
+		B933873B28BD6E81009D34A7 /* XCSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B933873A28BD6E81009D34A7 /* XCSelectButton.swift */; };
+		B933873E28BEA8B0009D34A7 /* XCSelectAmountPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B933873D28BEA8B0009D34A7 /* XCSelectAmountPicker.swift */; };
+		B933874028BEB4EE009D34A7 /* XCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B933873F28BEB4EE009D34A7 /* XCButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		B933872828BD4953009D34A7 /* Mont-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mont-ExtraLight.otf"; sourceTree = "<group>"; };
 		B933873228BD4BF2009D34A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B933873428BD4FFE009D34A7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B933873A28BD6E81009D34A7 /* XCSelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSelectButton.swift; sourceTree = "<group>"; };
+		B933873D28BEA8B0009D34A7 /* XCSelectAmountPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSelectAmountPicker.swift; sourceTree = "<group>"; };
+		B933873F28BEB4EE009D34A7 /* XCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				B933873228BD4BF2009D34A7 /* Info.plist */,
+				B933873628BD6DFA009D34A7 /* Components */,
 				B933872128BD4914009D34A7 /* Fonts */,
 				B933871928BD1202009D34A7 /* Preview Content */,
 				B933873128BD498A009D34A7 /* Screens */,
@@ -123,6 +130,32 @@
 				B933873428BD4FFE009D34A7 /* Constants.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B933873628BD6DFA009D34A7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B933873728BD6E1F009D34A7 /* Buttons */,
+				B933873C28BEA88D009D34A7 /* Pickers */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B933873728BD6E1F009D34A7 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				B933873F28BEB4EE009D34A7 /* XCButton.swift */,
+				B933873A28BD6E81009D34A7 /* XCSelectButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		B933873C28BEA88D009D34A7 /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				B933873D28BEA8B0009D34A7 /* XCSelectAmountPicker.swift */,
+			);
+			path = Pickers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,7 +236,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B933871628BD11FF009D34A7 /* ReloadFundsView.swift in Sources */,
+				B933873B28BD6E81009D34A7 /* XCSelectButton.swift in Sources */,
+				B933873E28BEA8B0009D34A7 /* XCSelectAmountPicker.swift in Sources */,
 				B933871428BD11FF009D34A7 /* XealChallengeApp.swift in Sources */,
+				B933874028BEB4EE009D34A7 /* XCButton.swift in Sources */,
 				B933873528BD4FFE009D34A7 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

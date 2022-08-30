@@ -18,9 +18,17 @@ struct ReloadFundsView: View {
             .ignoresSafeArea()
             
             VStack {
-                Text("Test")
-                    .font(Font.custom(Fonts.Mont.bold, size: 40))
+                Text("Greg Vargas")
+                    .font(Font.custom(Fonts.Mont.bold, size: 24))
+                    .padding()
+                
+                XCSelectAmountPicker()
+                
+                Spacer()
+                
+                XCButton(text: "Pay Now")
             }
+            .padding()
         }
     }
 }
