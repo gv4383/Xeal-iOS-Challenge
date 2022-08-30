@@ -18,3 +18,10 @@ struct Fonts {
         static let thin = "Mont-Thin"
     }
 }
+
+struct Copy {
+    static let fundsAvailable = "FUNDS AVAILABLE"
+    static let selectAmount = "SELECT RELOAD AMOUNT"
+    static let payNow = "Pay Now"
+    static let successfullyAdded = "Successfully Added!"
+}
