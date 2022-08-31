@@ -8,14 +8,28 @@
 import SwiftUI
 
 struct XCStandardButton: ButtonStyle {
+    @Environment(\.isEnabled) private var isEnabled
+    
     func makeBody(configuration: Configuration) -> some View {
-        configuration
+        var foregroundColor: Color {
+            if isEnabled {
+                return configuration.isPressed ? .purple.opacity(0.5) : .purple
+            } else {
+                return .purple.opacity(0.5)
+            }
+        }
+        
+        var backgroundColor: Color {
+            isEnabled ? .white : .white.opacity(0.5)
+        }
+        
+        return configuration
             .label
             .font(Font.custom(Fonts.Mont.bold, size: 16))
-            .foregroundColor(configuration.isPressed ? .purple.opacity(0.5) : .purple)
+            .foregroundColor(foregroundColor)
             .frame(maxWidth: .infinity)
             .padding()
-            .background(.white)
+            .background(backgroundColor)
             .cornerRadius(12)
     }
 }
