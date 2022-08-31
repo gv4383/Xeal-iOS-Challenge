@@ -7,22 +7,27 @@
 
 import SwiftUI
 
+struct XCStandardButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration
+            .label
+            .font(Font.custom(Fonts.Mont.bold, size: 16))
+            .foregroundColor(configuration.isPressed ? .purple.opacity(0.5) : .purple)
+            .frame(maxWidth: .infinity)
+            .padding()
+            .background(.white)
+            .cornerRadius(12)
+    }
+}
+
 struct XCButton: View {
     let text: String
     
     var body: some View {
-        Button {
+        Button(text) {
             print("Button pressed...")
-        } label: {
-            Text(text)
-                .font(Font.custom(Fonts.Mont.bold, size: 16))
-                .foregroundColor(.purple)
         }
-        .buttonStyle(.plain)
-        .frame(maxWidth: .infinity)
-        .padding()
-        .background(.white)
-        .cornerRadius(12)
+        .buttonStyle(XCStandardButton())
     }
 }
 
