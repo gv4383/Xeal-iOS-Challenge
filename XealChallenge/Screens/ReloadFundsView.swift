@@ -19,7 +19,7 @@ struct ReloadFundsView: View {
                 .ignoresSafeArea()
 
                 VStack {
-                    Text("Greg Vargas")
+                    Text("Amanda Gonzalez")
                         .font(Font.custom(Fonts.Mont.bold, size: 24))
                         .padding()
                     
