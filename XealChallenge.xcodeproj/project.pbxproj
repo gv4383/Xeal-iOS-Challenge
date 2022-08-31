@@ -22,6 +22,8 @@
 		B933873B28BD6E81009D34A7 /* XCSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B933873A28BD6E81009D34A7 /* XCSelectButton.swift */; };
 		B933873E28BEA8B0009D34A7 /* XCSelectAmountPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B933873D28BEA8B0009D34A7 /* XCSelectAmountPicker.swift */; };
 		B933874028BEB4EE009D34A7 /* XCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B933873F28BEB4EE009D34A7 /* XCButton.swift */; };
+		B9DC6FB528BF3682009F8EEA /* XCFundsAvailableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC6FB428BF3682009F8EEA /* XCFundsAvailableView.swift */; };
+		B9DC6FBB28BF3C2B009F8EEA /* XCLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC6FBA28BF3C2B009F8EEA /* XCLogo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		B933873A28BD6E81009D34A7 /* XCSelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSelectButton.swift; sourceTree = "<group>"; };
 		B933873D28BEA8B0009D34A7 /* XCSelectAmountPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSelectAmountPicker.swift; sourceTree = "<group>"; };
 		B933873F28BEB4EE009D34A7 /* XCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCButton.swift; sourceTree = "<group>"; };
+		B9DC6FB428BF3682009F8EEA /* XCFundsAvailableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCFundsAvailableView.swift; sourceTree = "<group>"; };
+		B9DC6FBA28BF3C2B009F8EEA /* XCLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCLogo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +140,9 @@
 			isa = PBXGroup;
 			children = (
 				B933873728BD6E1F009D34A7 /* Buttons */,
+				B9DC6FB928BF3C0A009F8EEA /* Logo */,
 				B933873C28BEA88D009D34A7 /* Pickers */,
+				B9DC6FB328BF3655009F8EEA /* Views */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -156,6 +162,22 @@
 				B933873D28BEA8B0009D34A7 /* XCSelectAmountPicker.swift */,
 			);
 			path = Pickers;
+			sourceTree = "<group>";
+		};
+		B9DC6FB328BF3655009F8EEA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B9DC6FB428BF3682009F8EEA /* XCFundsAvailableView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B9DC6FB928BF3C0A009F8EEA /* Logo */ = {
+			isa = PBXGroup;
+			children = (
+				B9DC6FBA28BF3C2B009F8EEA /* XCLogo.swift */,
+			);
+			path = Logo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +259,8 @@
 			files = (
 				B933871628BD11FF009D34A7 /* ReloadFundsView.swift in Sources */,
 				B933873B28BD6E81009D34A7 /* XCSelectButton.swift in Sources */,
+				B9DC6FBB28BF3C2B009F8EEA /* XCLogo.swift in Sources */,
+				B9DC6FB528BF3682009F8EEA /* XCFundsAvailableView.swift in Sources */,
 				B933873E28BEA8B0009D34A7 /* XCSelectAmountPicker.swift in Sources */,
 				B933871428BD11FF009D34A7 /* XealChallengeApp.swift in Sources */,
 				B933874028BEB4EE009D34A7 /* XCButton.swift in Sources */,

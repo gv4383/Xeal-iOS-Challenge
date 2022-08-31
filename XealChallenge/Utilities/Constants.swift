@@ -25,3 +25,7 @@ struct Copy {
     static let payNow = "Pay Now"
     static let successfullyAdded = "Successfully Added!"
 }
+
+struct SFSymbols {
+    static let rhombus = "rhombus"
+}

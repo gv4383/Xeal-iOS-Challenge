@@ -22,6 +22,8 @@ struct ReloadFundsView: View {
                     Text("Greg Vargas")
                         .font(Font.custom(Fonts.Mont.bold, size: 24))
                         .padding()
+                    
+                    XCFundsAvailableView(availableFunds: 8.10)
 
                     XCSelectAmountPicker()
 
