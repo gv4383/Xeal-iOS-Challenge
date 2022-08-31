@@ -24,6 +24,9 @@
 		B933874028BEB4EE009D34A7 /* XCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B933873F28BEB4EE009D34A7 /* XCButton.swift */; };
 		B9DC6FB528BF3682009F8EEA /* XCFundsAvailableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC6FB428BF3682009F8EEA /* XCFundsAvailableView.swift */; };
 		B9DC6FBB28BF3C2B009F8EEA /* XCLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC6FBA28BF3C2B009F8EEA /* XCLogo.swift */; };
+		B9DC6FBE28C0134E009F8EEA /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B9DC6FBD28C0134E009F8EEA /* Lottie */; };
+		B9DC6FC228C0144D009F8EEA /* SmallSpinner.json in Resources */ = {isa = PBXBuildFile; fileRef = B9DC6FC028C0144D009F8EEA /* SmallSpinner.json */; };
+		B9DC6FC328C0144D009F8EEA /* CheckMark.json in Resources */ = {isa = PBXBuildFile; fileRef = B9DC6FC128C0144D009F8EEA /* CheckMark.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,8 @@
 		B933873F28BEB4EE009D34A7 /* XCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCButton.swift; sourceTree = "<group>"; };
 		B9DC6FB428BF3682009F8EEA /* XCFundsAvailableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCFundsAvailableView.swift; sourceTree = "<group>"; };
 		B9DC6FBA28BF3C2B009F8EEA /* XCLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCLogo.swift; sourceTree = "<group>"; };
+		B9DC6FC028C0144D009F8EEA /* SmallSpinner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SmallSpinner.json; sourceTree = "<group>"; };
+		B9DC6FC128C0144D009F8EEA /* CheckMark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CheckMark.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9DC6FBE28C0134E009F8EEA /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +121,7 @@
 			children = (
 				B933871328BD11FF009D34A7 /* XealChallengeApp.swift */,
 				B933871728BD1202009D34A7 /* Assets.xcassets */,
+				B9DC6FBF28C013F1009F8EEA /* Animations */,
 				B933872128BD4914009D34A7 /* Fonts */,
 			);
 			path = Support;
@@ -180,6 +187,15 @@
 			path = Logo;
 			sourceTree = "<group>";
 		};
+		B9DC6FBF28C013F1009F8EEA /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				B9DC6FC128C0144D009F8EEA /* CheckMark.json */,
+				B9DC6FC028C0144D009F8EEA /* SmallSpinner.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -196,6 +212,9 @@
 			dependencies = (
 			);
 			name = XealChallenge;
+			packageProductDependencies = (
+				B9DC6FBD28C0134E009F8EEA /* Lottie */,
+			);
 			productName = XealChallenge;
 			productReference = B933871028BD11FF009D34A7 /* XealChallenge.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +243,9 @@
 				Base,
 			);
 			mainGroup = B933870728BD11FF009D34A7;
+			packageReferences = (
+				B9DC6FBC28C0134E009F8EEA /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = B933871128BD11FF009D34A7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -240,7 +262,9 @@
 			files = (
 				B933872E28BD4953009D34A7 /* Mont-Light.otf in Resources */,
 				B933872D28BD4953009D34A7 /* Mont-Black.otf in Resources */,
+				B9DC6FC328C0144D009F8EEA /* CheckMark.json in Resources */,
 				B933872A28BD4953009D34A7 /* Mont-Regular.otf in Resources */,
+				B9DC6FC228C0144D009F8EEA /* SmallSpinner.json in Resources */,
 				B933871B28BD1202009D34A7 /* Preview Assets.xcassets in Resources */,
 				B933872B28BD4953009D34A7 /* Mont-Thin.otf in Resources */,
 				B933872928BD4953009D34A7 /* Mont-SemiBold.otf in Resources */,
@@ -467,6 +491,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B9DC6FBC28C0134E009F8EEA /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B9DC6FBD28C0134E009F8EEA /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9DC6FBC28C0134E009F8EEA /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B933870828BD11FF009D34A7 /* Project object */;
 }
