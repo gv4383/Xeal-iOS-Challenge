@@ -76,7 +76,6 @@
 			children = (
 				B933873228BD4BF2009D34A7 /* Info.plist */,
 				B933873628BD6DFA009D34A7 /* Components */,
-				B933872128BD4914009D34A7 /* Fonts */,
 				B933871928BD1202009D34A7 /* Preview Content */,
 				B933873128BD498A009D34A7 /* Screens */,
 				B933873028BD4978009D34A7 /* Support */,
@@ -112,6 +111,7 @@
 			children = (
 				B933871328BD11FF009D34A7 /* XealChallengeApp.swift */,
 				B933871728BD1202009D34A7 /* Assets.xcassets */,
+				B933872128BD4914009D34A7 /* Fonts */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -375,6 +375,7 @@
 				INFOPLIST_FILE = XealChallenge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,6 +405,7 @@
 				INFOPLIST_FILE = XealChallenge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

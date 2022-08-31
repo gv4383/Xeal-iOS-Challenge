@@ -9,26 +9,29 @@ import SwiftUI
 
 struct ReloadFundsView: View {
     var body: some View {
-        ZStack {
-            LinearGradient(
-                gradient: Gradient(colors: [.blue, .purple]),
-                startPoint: .top,
-                endPoint: .bottom
-            )
-            .ignoresSafeArea()
-            
-            VStack {
-                Text("Greg Vargas")
-                    .font(Font.custom(Fonts.Mont.bold, size: 24))
-                    .padding()
-                
-                XCSelectAmountPicker()
-                
-                Spacer()
-                
-                XCButton(text: "Pay Now")
+        NavigationView {
+            ZStack {
+                LinearGradient(
+                    gradient: Gradient(colors: [.blue, .purple]),
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+                .ignoresSafeArea()
+
+                VStack {
+                    Text("Greg Vargas")
+                        .font(Font.custom(Fonts.Mont.bold, size: 24))
+                        .padding()
+
+                    XCSelectAmountPicker()
+
+                    Spacer()
+
+                    XCButton(text: "Pay Now")
+                }
+                .padding()
             }
-            .padding()
+            .navigationBarHidden(true)
         }
     }
 }
