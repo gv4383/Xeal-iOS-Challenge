@@ -37,11 +37,21 @@ struct XCStandardButton: ButtonStyle {
 struct XCButton: View {
     let text: String
     
+    @State private var isLoading = false
+    
     var body: some View {
-        Button(text) {
-            print("Button pressed...")
+        Button {
+            isLoading = true
+        } label: {
+            if isLoading {
+                XCLottieView(name: "smallSpinner", loopMode: .loop)
+                    .frame(width: 16, height: 16)
+            } else {
+                Text(text)
+            }
         }
         .buttonStyle(XCStandardButton())
+        .disabled(isLoading)
     }
 }
 

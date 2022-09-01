@@ -30,7 +30,6 @@ struct ReloadFundsView: View {
                     Spacer()
 
                     XCButton(text: "Pay Now")
-                        .disabled(true)
                 }
                 .padding()
             }

@@ -30,7 +30,7 @@ struct XCFundsAvailableView: View {
         .padding()
         .overlay(
             RoundedRectangle(cornerRadius: 12)
-                .stroke(.gray.opacity(0.5), lineWidth: 2)
+                .stroke(.white.opacity(0.2), lineWidth: 2)
         )
     }
 }
