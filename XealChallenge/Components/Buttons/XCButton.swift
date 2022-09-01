@@ -13,14 +13,14 @@ struct XCStandardButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         var foregroundColor: Color {
             if isEnabled {
-                return configuration.isPressed ? .purple.opacity(0.5) : .purple
+                return configuration.isPressed ? .darkPurple.opacity(0.5) : .darkPurple
             } else {
-                return .purple.opacity(0.5)
+                return .darkPurple.opacity(0.4)
             }
         }
         
         var backgroundColor: Color {
-            isEnabled ? .white : .white.opacity(0.5)
+            isEnabled ? .white : .white.opacity(0.4)
         }
         
         return configuration

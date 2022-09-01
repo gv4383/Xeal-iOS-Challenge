@@ -26,9 +26,9 @@ struct XCSelectButton: View {
             .padding(.vertical)
             .padding(.horizontal, 24)
             .background(.white.opacity(backgroundOpacity))
-            .cornerRadius(12, antialiased: true)
+            .cornerRadius(16, antialiased: true)
             .overlay(
-                RoundedRectangle(cornerRadius: 12)
+                RoundedRectangle(cornerRadius: 16)
                     .stroke(overlayColor, lineWidth: 2)
             )
             .onTapGesture {

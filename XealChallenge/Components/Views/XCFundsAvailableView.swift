@@ -21,16 +21,17 @@ struct XCFundsAvailableView: View {
             
             VStack(alignment: .leading, spacing: 4) {
                 Text(formattedAvailableFunds)
-                    .font(Font.custom(Fonts.Mont.bold, size: 24))
+                    .font(Font.custom(Fonts.Mont.bold, size: 22))
                 
                 Text(Copy.fundsAvailable)
-                    .font(Font.custom(Fonts.Mont.bold, size: 12))
+                    .font(Font.custom(Fonts.Mont.semiBold, size: 12))
+                    .opacity(0.6)
             }
         }
         .padding()
         .overlay(
             RoundedRectangle(cornerRadius: 12)
-                .stroke(.white.opacity(0.2), lineWidth: 2)
+                .stroke(.white.opacity(0.1), lineWidth: 2)
         )
     }
 }

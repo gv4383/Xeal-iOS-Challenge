@@ -14,7 +14,7 @@ struct XCLogo: View {
             .padding(8)
             .overlay(
                 Circle()
-                    .stroke(.white.opacity(0.5), lineWidth: 2)
+                    .stroke(.white.opacity(0.4), lineWidth: 2)
             )
     }
 }

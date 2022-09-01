@@ -15,6 +15,7 @@ struct XCSelectAmountPicker: View {
             HStack {
                 Text(Copy.selectAmount)
                     .font(Font.custom(Fonts.Mont.bold, size: 14))
+                    .opacity(0.6)
             }
             .padding()
             

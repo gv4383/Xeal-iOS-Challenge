@@ -12,7 +12,7 @@ struct ReloadFundsView: View {
         NavigationView {
             ZStack {
                 LinearGradient(
-                    gradient: Gradient(colors: [.blue, .purple]),
+                    gradient: Gradient(colors: [.purpleBlue, .violet]),
                     startPoint: .top,
                     endPoint: .bottom
                 )
