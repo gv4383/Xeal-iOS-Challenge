@@ -29,6 +29,7 @@
 		B9DC6FC528C0443A009F8EEA /* XCLottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC6FC428C0443A009F8EEA /* XCLottieView.swift */; };
 		B9DC6FC928C06001009F8EEA /* smallSpinner.json in Resources */ = {isa = PBXBuildFile; fileRef = B9DC6FC828C06001009F8EEA /* smallSpinner.json */; };
 		B9DC6FCB28C0EA49009F8EEA /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC6FCA28C0EA49009F8EEA /* Color-Theme.swift */; };
+		B9DC6FCD28C1340F009F8EEA /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC6FCC28C1340F009F8EEA /* ConfirmationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		B9DC6FC428C0443A009F8EEA /* XCLottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCLottieView.swift; sourceTree = "<group>"; };
 		B9DC6FC828C06001009F8EEA /* smallSpinner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = smallSpinner.json; sourceTree = "<group>"; };
 		B9DC6FCA28C0EA49009F8EEA /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
+		B9DC6FCC28C1340F009F8EEA /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		B933873128BD498A009D34A7 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				B9DC6FCC28C1340F009F8EEA /* ConfirmationView.swift */,
 				B933871528BD11FF009D34A7 /* ReloadFundsView.swift */,
 			);
 			path = Screens;
@@ -287,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9DC6FCD28C1340F009F8EEA /* ConfirmationView.swift in Sources */,
 				B933871628BD11FF009D34A7 /* ReloadFundsView.swift in Sources */,
 				B933873B28BD6E81009D34A7 /* XCSelectButton.swift in Sources */,
 				B9DC6FBB28BF3C2B009F8EEA /* XCLogo.swift in Sources */,

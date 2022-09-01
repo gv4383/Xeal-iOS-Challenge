@@ -29,7 +29,7 @@ struct ReloadFundsView: View {
 
                     Spacer()
 
-                    XCButton(text: "Pay Now")
+                    XCButton(text: Copy.payNow)
                 }
                 .padding()
             }

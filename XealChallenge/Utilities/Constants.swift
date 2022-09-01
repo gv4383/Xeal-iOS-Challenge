@@ -29,3 +29,8 @@ struct Copy {
 struct SFSymbols {
     static let rhombus = "rhombus"
 }
+
+struct Animations {
+    static let checkMark = "checkMark"
+    static let smallSpinner = "smallSpinner"
+}

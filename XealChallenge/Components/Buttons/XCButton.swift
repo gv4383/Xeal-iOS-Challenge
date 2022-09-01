@@ -44,7 +44,7 @@ struct XCButton: View {
             isLoading = true
         } label: {
             if isLoading {
-                XCLottieView(name: "smallSpinner", loopMode: .loop)
+                XCLottieView(name: Animations.smallSpinner, loopMode: .loop)
                     .frame(width: 16, height: 16)
             } else {
                 Text(text)
