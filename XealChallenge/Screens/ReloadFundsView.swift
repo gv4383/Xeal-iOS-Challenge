@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ReloadFundsView: View {
+    private let writer = NFCManager()
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -30,6 +32,11 @@ struct ReloadFundsView: View {
                     Spacer()
 
                     XCButton(text: Copy.payNow)
+                    
+                    Button("Write to tag") {
+                        writer.scanTag(nfcData: "https://www.apple.com/")
+                    }
+                    .padding()
                 }
                 .padding()
             }

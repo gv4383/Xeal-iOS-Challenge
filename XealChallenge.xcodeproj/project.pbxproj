@@ -30,6 +30,7 @@
 		B9DC6FC928C06001009F8EEA /* smallSpinner.json in Resources */ = {isa = PBXBuildFile; fileRef = B9DC6FC828C06001009F8EEA /* smallSpinner.json */; };
 		B9DC6FCB28C0EA49009F8EEA /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC6FCA28C0EA49009F8EEA /* Color-Theme.swift */; };
 		B9DC6FCD28C1340F009F8EEA /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC6FCC28C1340F009F8EEA /* ConfirmationView.swift */; };
+		B9DC6FD128C1C3A6009F8EEA /* NFCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC6FD028C1C3A6009F8EEA /* NFCManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,8 @@
 		B9DC6FC828C06001009F8EEA /* smallSpinner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = smallSpinner.json; sourceTree = "<group>"; };
 		B9DC6FCA28C0EA49009F8EEA /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
 		B9DC6FCC28C1340F009F8EEA /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
+		B9DC6FCE28C1B961009F8EEA /* XealChallenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XealChallenge.entitlements; sourceTree = "<group>"; };
+		B9DC6FD028C1C3A6009F8EEA /* NFCManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +93,10 @@
 		B933871228BD11FF009D34A7 /* XealChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				B9DC6FCE28C1B961009F8EEA /* XealChallenge.entitlements */,
 				B933873228BD4BF2009D34A7 /* Info.plist */,
 				B933873628BD6DFA009D34A7 /* Components */,
+				B9DC6FCF28C1C389009F8EEA /* Managers */,
 				B933871928BD1202009D34A7 /* Preview Content */,
 				B933873128BD498A009D34A7 /* Screens */,
 				B933873028BD4978009D34A7 /* Support */,
@@ -205,6 +210,14 @@
 			path = Animations;
 			sourceTree = "<group>";
 		};
+		B9DC6FCF28C1C389009F8EEA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B9DC6FD028C1C3A6009F8EEA /* NFCManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -299,6 +312,7 @@
 				B933873E28BEA8B0009D34A7 /* XCSelectAmountPicker.swift in Sources */,
 				B933871428BD11FF009D34A7 /* XealChallengeApp.swift in Sources */,
 				B933874028BEB4EE009D34A7 /* XCButton.swift in Sources */,
+				B9DC6FD128C1C3A6009F8EEA /* NFCManager.swift in Sources */,
 				B933873528BD4FFE009D34A7 /* Constants.swift in Sources */,
 				B9DC6FCB28C0EA49009F8EEA /* Color-Theme.swift in Sources */,
 			);
@@ -426,6 +440,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = XealChallenge/XealChallenge.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"XealChallenge/Preview Content\"";
@@ -445,6 +461,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.skwerlhub.XealChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -456,6 +473,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = XealChallenge/XealChallenge.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"XealChallenge/Preview Content\"";
@@ -475,6 +494,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.skwerlhub.XealChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
