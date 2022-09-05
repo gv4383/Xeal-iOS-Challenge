@@ -11,6 +11,18 @@ struct ReloadFundsView: View {
     @State private var account: Account?
     @State private var selectedReloadAmount  = 0
     
+    private var isButtonDisabled: Bool {
+        if account == nil {
+            return true
+        } else {
+            if selectedReloadAmount == 0 {
+                return true
+            }
+            
+            return false
+        }
+    }
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -42,14 +54,21 @@ struct ReloadFundsView: View {
                     Spacer()
                     
                     XCButton(text: Copy.payNow) {
+                        guard let account = account else {
+                            return
+                        }
+                        
+                        let newBalance = account.balance + Double(selectedReloadAmount)
+                        
                         NFCManager.performAction(
                             .updateAccount(
-                                account: Account(name: "Amanda Gonzalez", balance: 8.10)
+                                account: Account(name: account.name, balance: newBalance)
                             )
                         ) { account in
                             self.account = try? account.get()
                         }
                     }
+                    .disabled(isButtonDisabled)
                 }
                 .padding()
             }
