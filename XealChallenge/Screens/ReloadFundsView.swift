@@ -25,6 +25,35 @@ struct ReloadFundsView: View {
         }
     }
     
+    private func updateAccount() {
+        isPayNowButtonLoading = true
+        
+        guard let account = account else {
+            isPayNowButtonLoading = false
+            return
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            isPayNowButtonLoading = false
+        }
+        
+        let newBalance = account.balance + Double(selectedReloadAmount)
+        
+        NFCManager.performAction(
+            .updateAccount(
+                account: Account(name: account.name, balance: newBalance)
+            )
+        ) { account in
+            isPayNowButtonLoading = true
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                self.account = try? account.get()
+                self.isShowingConfirmationView = true
+                self.isPayNowButtonLoading = false
+            }
+        }
+    }
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -35,48 +64,33 @@ struct ReloadFundsView: View {
                 )
                 .ignoresSafeArea()
 
-                VStack {
+                VStack(spacing: 16) {
                     Text(account?.name ?? "")
                         .font(Font.custom(Fonts.Mont.bold, size: 24))
                         .padding()
                     
-                    XCFundsAvailableView(availableFunds: account?.balance ?? 0.0)
-                        .onTapGesture {
-                            NFCManager.performAction(.readAccount) { account in
-                                self.account = try? account.get()
+                    VStack(spacing: 48) {
+                        XCFundsAvailableView(availableFunds: account?.balance ?? 0.0)
+                            .onTapGesture {
+                                NFCManager.performAction(.readAccount) { account in
+                                    self.account = try? account.get()
+                                }
                             }
-                        }
-
-                    XCSelectAmountPicker(selectedReloadAmount: $selectedReloadAmount)
+                        
+                        XCSelectAmountPicker(selectedReloadAmount: $selectedReloadAmount)
+                    }
                     
-                    NavigationLink(destination: ConfirmationView(addedAmount: selectedReloadAmount), isActive: $isShowingConfirmationView) {
+                    NavigationLink(
+                        destination: ConfirmationView(addedAmount: selectedReloadAmount),
+                        isActive: $isShowingConfirmationView
+                    ) {
                         EmptyView()
                     }
 
                     Spacer()
                     
                     XCButton(isLoading: $isPayNowButtonLoading, text: Copy.payNow) {
-                        isPayNowButtonLoading = true
-                        
-                        guard let account = account else {
-                            isPayNowButtonLoading = false
-                            return
-                        }
-                        
-                        let newBalance = account.balance + Double(selectedReloadAmount)
-                        
-                        NFCManager.performAction(
-                            .updateAccount(
-                                account: Account(name: account.name, balance: newBalance)
-                            )
-                        ) { account in
-                            self.account = try? account.get()
-                            
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                                self.isShowingConfirmationView = true
-                                self.isPayNowButtonLoading = false
-                            }
-                        }
+                        updateAccount()
                     }
                     .disabled(isButtonDisabled)
                 }

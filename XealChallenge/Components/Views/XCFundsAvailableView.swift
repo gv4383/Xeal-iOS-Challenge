@@ -9,6 +9,7 @@ import SwiftUI
 
 struct XCFundsAvailableView: View {
     let availableFunds: Double
+    
     var formattedAvailableFunds: String {
         String(format: "$%.2f", availableFunds)
     }

@@ -42,11 +42,10 @@ struct XCButton: View {
     
     var body: some View {
         Button {
-            isLoading = true
             action()
         } label: {
             if isLoading {
-                XCLottieView(name: Animations.smallSpinner, loopMode: .loop)
+                XCLottieView(name: Animations.purpleSpinner, loopMode: .loop)
                     .frame(width: 16, height: 16)
             } else {
                 Text(text)

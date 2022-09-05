@@ -19,7 +19,7 @@ struct XCSelectAmountPicker: View {
                     .font(Font.custom(Fonts.Mont.bold, size: 14))
                     .opacity(0.6)
             }
-            .padding()
+            .padding([.horizontal, .bottom])
             
             HStack(spacing: 16) {
                 ForEach(amounts, id: \.self) { amount in

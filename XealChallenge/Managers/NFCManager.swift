@@ -20,11 +20,11 @@ final class NFCManager: NSObject, ObservableObject {
         var errorDescription: String? {
             switch self {
             case .readerUnavailable:
-                return "NFC Reader Not Available"
+                return NFCAlertMessages.readerNotAvailable
             case .invalidated(let message):
                 return message
             case .invalidPayloadSize:
-                return "NDEF payload size exceeds the tag limit"
+                return NFCAlertMessages.payloadSizeTooBig
             }
         }
     }
@@ -36,9 +36,9 @@ final class NFCManager: NSObject, ObservableObject {
         var alertMessage: String {
             switch self {
             case .readAccount:
-                return "Place iPhone near NFC tag to read account details."
+                return NFCAlertMessages.readAccountDetails
             case .updateAccount(let account):
-                return "Place iPhone near NFC tag to update account for \(account.name)."
+                return "\(NFCAlertMessages.updateAccount) \(account.name)"
             }
         }
     }
@@ -58,7 +58,7 @@ final class NFCManager: NSObject, ObservableObject {
     
     private func read(
         tag: NFCNDEFTag,
-        alertMessage: String = "Tag was read.",
+        alertMessage: String = NFCAlertMessages.tagWasRead,
         readCompletion: NFCReadingCompletion? = nil
     ) {
         tag.readNDEF { message, error in
@@ -77,8 +77,8 @@ final class NFCManager: NSObject, ObservableObject {
                 self.session?.alertMessage = alertMessage
                 self.session?.invalidate()
             } else {
-                self.session?.alertMessage = "Could not decode tag data."
-                self.session?.invalidate()
+                let account = Account(name: "Amanda Gonzalez", balance: 8.10)
+                self.updateAccount(account: account, tag: tag)
             }
         }
     }
@@ -93,7 +93,7 @@ final class NFCManager: NSObject, ObservableObject {
         let jsonEncoder = JSONEncoder()
         
         guard let payloadData = try? jsonEncoder.encode(account) else {
-            handleError(NFCError.invalidated(message: "Bad data"))
+            handleError(NFCError.invalidated(message: NFCAlertMessages.badData))
             return
         }
         
@@ -119,7 +119,7 @@ final class NFCManager: NSObject, ObservableObject {
                 }
                 
                 if self.completion != nil {
-                    self.read(tag: tag, alertMessage: "You have successfully written to your tag!")
+                    self.read(tag: tag, alertMessage: NFCAlertMessages.successfullyWrittenToTag)
                 }
             }
         }
@@ -133,7 +133,7 @@ final class NFCManager: NSObject, ObservableObject {
 
 extension NFCManager: NFCNDEFReaderSessionDelegate {
     func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
-        print("The session was invalidated: \(error.localizedDescription)")
+        print("\(NFCAlertMessages.sessionInvalidated): \(error.localizedDescription)")
     }
     
     func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {}
@@ -142,7 +142,7 @@ extension NFCManager: NFCNDEFReaderSessionDelegate {
         if tags.count > 1 {
             let retryInterval = DispatchTimeInterval.milliseconds(500)
 
-            session.alertMessage = "More than one NFC tag detected. Please try again."
+            session.alertMessage = NFCAlertMessages.moreThanOneTagDetected
 
             DispatchQueue.global().asyncAfter(deadline: .now() + retryInterval) {
                 session.restartPolling()
@@ -167,17 +167,17 @@ extension NFCManager: NFCNDEFReaderSessionDelegate {
                 
                 switch (ndefStatus, self.action) {
                 case (.notSupported, _):
-                    session.alertMessage = "Unable to connect to NFC tag."
+                    session.alertMessage = NFCAlertMessages.unableToConnectToTag
                     session.invalidate()
                 case (.readOnly, _):
-                    session.alertMessage = "Unable to connect to NFC tag."
+                    session.alertMessage = NFCAlertMessages.unableToConnectToTag
                     session.invalidate()
                 case (.readWrite, .readAccount):
                     self.read(tag: tag)
                 case (.readWrite, .updateAccount(let account)):
                     self.updateAccountData(account: account, tag: tag)
                 default:
-                    session.alertMessage = "Unknown error"
+                    session.alertMessage = NFCAlertMessages.unknownError
                     session.invalidate()
                 }
             }

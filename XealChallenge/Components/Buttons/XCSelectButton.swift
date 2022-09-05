@@ -9,9 +9,9 @@ import SwiftUI
 
 struct XCSelectButton: View {
     let reloadAmount: Int
+    @Binding var selectedReloadAmount: Int
     
     @State private var isSelected = false
-    @Binding var selectedReloadAmount: Int
     
     private var isUsingSelectedStyling: Bool {
         isSelected && reloadAmount == selectedReloadAmount
