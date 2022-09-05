@@ -11,7 +11,7 @@ import SwiftUI
 // On line 28, change the return value to false
 // Comment out lines 41 - 44
 // Comment out line 50
-// On line 54, change the Account model to  Account(name: "Amanda Gonzalez", balance: 5.0)
+// On line 54, change the Account model to  Account(name: "Amanda Gonzalez", balance: 8.10)
 // Run the app and you should be able to tap Pay Now
 // Hold the new/blank tag to the phone and it should write the correct schema to the tag
 // Stop the app and undo all of the changes in the code
