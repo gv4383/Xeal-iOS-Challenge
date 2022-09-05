@@ -83,7 +83,13 @@ final class NFCManager: NSObject, ObservableObject {
         }
     }
     
-    private func writeAccountData(account: Account, with tag: NFCNDEFTag) {
+    private func updateAccount(account: Account, tag: NFCNDEFTag) {
+        read(tag: tag) { _ in
+            self.updateAccountData(account: account, tag: tag)
+        }
+    }
+    
+    private func updateAccountData(account: Account, tag: NFCNDEFTag) {
         let jsonEncoder = JSONEncoder()
         
         guard let payloadData = try? jsonEncoder.encode(account) else {
@@ -112,8 +118,9 @@ final class NFCManager: NSObject, ObservableObject {
                     return
                 }
                 
-                self.session?.alertMessage = "You have successfully written to your tag!"
-                self.session?.invalidate()
+                if self.completion != nil {
+                    self.read(tag: tag, alertMessage: "You have successfully written to your tag!")
+                }
             }
         }
     }
@@ -168,7 +175,7 @@ extension NFCManager: NFCNDEFReaderSessionDelegate {
                 case (.readWrite, .readAccount):
                     self.read(tag: tag)
                 case (.readWrite, .updateAccount(let account)):
-                    self.writeAccountData(account: account, with: tag)
+                    self.updateAccountData(account: account, tag: tag)
                 default:
                     session.alertMessage = "Unknown error"
                     session.invalidate()

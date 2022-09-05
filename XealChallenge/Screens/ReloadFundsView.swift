@@ -26,24 +26,25 @@ struct ReloadFundsView: View {
                         .padding()
                     
                     XCFundsAvailableView(availableFunds: account?.balance ?? 0.0)
+                        .onTapGesture {
+                            NFCManager.performAction(.readAccount) { account in
+                                self.account = try? account.get()
+                            }
+                        }
 
                     XCSelectAmountPicker()
 
                     Spacer()
                     
-                    Button("Write to tag") {
-                        NFCManager.performAction(.updateAccount(account: Account(name: "Amanda Gonzalez", balance: 8.10)))
-                    }
-                    .padding()
-                    
-                    Button("Read tag") {
-                        NFCManager.performAction(.readAccount) { account in
+                    XCButton(text: Copy.payNow) {
+                        NFCManager.performAction(
+                            .updateAccount(
+                                account: Account(name: "Amanda Gonzalez", balance: 8.10)
+                            )
+                        ) { account in
                             self.account = try? account.get()
                         }
                     }
-                    .padding()
-                    
-                    XCButton(text: Copy.payNow)
                 }
                 .padding()
             }

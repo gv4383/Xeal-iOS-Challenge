@@ -36,12 +36,14 @@ struct XCStandardButton: ButtonStyle {
 
 struct XCButton: View {
     let text: String
+    let action: () -> Void
     
     @State private var isLoading = false
     
     var body: some View {
         Button {
             isLoading = true
+            action()
         } label: {
             if isLoading {
                 XCLottieView(name: Animations.smallSpinner, loopMode: .loop)
@@ -56,8 +58,10 @@ struct XCButton: View {
 }
 
 struct XCButton_Previews: PreviewProvider {
+    private static func previewFunc() {}
+    
     static var previews: some View {
-        XCButton(text: "Pay Now")
+        XCButton(text: "Pay Now", action: previewFunc)
             .preferredColorScheme(.dark)
     }
 }
