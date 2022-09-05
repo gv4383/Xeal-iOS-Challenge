@@ -37,15 +37,15 @@ struct Animations {
 }
 
 struct NFCAlertMessages {
-    static let readerNotAvailable = "NFC reader not available."
-    static let payloadSizeTooBig = "NDEF payload size exceeds the tag limit."
-    static let readAccountDetails = "Place iPhone near NFC tag to read account details."
+    static let readerNotAvailable = "NFC reader not available"
+    static let payloadSizeTooBig = "NDEF payload size exceeds the tag limit"
+    static let readAccountDetails = "Place iPhone near NFC tag to read account details"
     static let updateAccount = "Place iPhone near NFC tag to update account for"
-    static let tagWasRead = "NFC tag was read."
-    static let badData = "Bad data."
+    static let tagWasRead = "NFC tag was read"
+    static let badData = "Bad data"
     static let successfullyWrittenToTag = "You have successfully written to your tag!"
     static let sessionInvalidated = "The session was invalidated"
     static let moreThanOneTagDetected = "More than one NFC tag detected. Please try again."
-    static let unableToConnectToTag = "Unable to connect to NFC tag."
-    static let unknownError = "An unknown error occurred while reading NFC tag."
+    static let unableToConnectToTag = "Unable to connect to NFC tag"
+    static let unknownError = "An unknown error occurred while reading NFC tag"
 }
