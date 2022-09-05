@@ -44,7 +44,7 @@ struct ReloadFundsView: View {
                 account: Account(name: account.name, balance: newBalance)
             )
         ) { account in
-            isPayNowButtonLoading = true
+            self.isPayNowButtonLoading = true
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                 self.account = try? account.get()

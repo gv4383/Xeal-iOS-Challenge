@@ -9,8 +9,7 @@ import SwiftUI
 
 struct XCLogo: View {
     var body: some View {
-        Image(systemName: SFSymbols.rhombus)
-            .font(.system(size: 24))
+        Image("logo")
             .padding(8)
             .overlay(
                 Circle()
