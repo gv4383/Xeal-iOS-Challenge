@@ -10,6 +10,8 @@ import SwiftUI
 struct ReloadFundsView: View {
     @State private var account: Account?
     @State private var selectedReloadAmount  = 0
+    @State private var isPayNowButtonLoading = false
+    @State private var isShowingConfirmationView = false
     
     private var isButtonDisabled: Bool {
         if account == nil {
@@ -47,14 +49,17 @@ struct ReloadFundsView: View {
 
                     XCSelectAmountPicker(selectedReloadAmount: $selectedReloadAmount)
                     
-                    Text("\(selectedReloadAmount)")
-                        .font(Font.custom(Fonts.Mont.bold, size: 24))
-                        .padding()
+                    NavigationLink(destination: ConfirmationView(addedAmount: selectedReloadAmount), isActive: $isShowingConfirmationView) {
+                        EmptyView()
+                    }
 
                     Spacer()
                     
-                    XCButton(text: Copy.payNow) {
+                    XCButton(isLoading: $isPayNowButtonLoading, text: Copy.payNow) {
+                        isPayNowButtonLoading = true
+                        
                         guard let account = account else {
+                            isPayNowButtonLoading = false
                             return
                         }
                         
@@ -66,6 +71,11 @@ struct ReloadFundsView: View {
                             )
                         ) { account in
                             self.account = try? account.get()
+                            
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                                self.isShowingConfirmationView = true
+                                self.isPayNowButtonLoading = false
+                            }
                         }
                     }
                     .disabled(isButtonDisabled)

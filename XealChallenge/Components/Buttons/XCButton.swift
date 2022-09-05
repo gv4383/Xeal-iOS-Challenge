@@ -35,10 +35,10 @@ struct XCStandardButton: ButtonStyle {
 }
 
 struct XCButton: View {
+    @Binding var isLoading: Bool
     let text: String
     let action: () -> Void
     
-    @State private var isLoading = false
     
     var body: some View {
         Button {
@@ -61,7 +61,7 @@ struct XCButton_Previews: PreviewProvider {
     private static func previewFunc() {}
     
     static var previews: some View {
-        XCButton(text: "Pay Now", action: previewFunc)
+        XCButton(isLoading: .constant(false), text: "Pay Now", action: previewFunc)
             .preferredColorScheme(.dark)
     }
 }
