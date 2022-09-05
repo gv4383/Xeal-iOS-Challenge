@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct XCSelectAmountPicker: View {
-    let amounts = [10, 25, 50]
+    @Binding var selectedReloadAmount: Int
+    
+    private let amounts = [10, 25, 50]
     
     var body: some View {
         VStack {
@@ -21,7 +23,7 @@ struct XCSelectAmountPicker: View {
             
             HStack(spacing: 16) {
                 ForEach(amounts, id: \.self) { amount in
-                    XCSelectButton(reloadAmount: amount)
+                    XCSelectButton(reloadAmount: amount, selectedReloadAmount: $selectedReloadAmount)
                 }
             }
             .frame(maxWidth: .infinity)
@@ -32,7 +34,7 @@ struct XCSelectAmountPicker: View {
 
 struct XCSelectAmountPicker_Previews: PreviewProvider {
     static var previews: some View {
-        XCSelectAmountPicker()
+        XCSelectAmountPicker(selectedReloadAmount: .constant(25))
             .preferredColorScheme(.dark)
     }
 }

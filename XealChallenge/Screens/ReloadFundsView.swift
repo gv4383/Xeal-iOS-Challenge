@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ReloadFundsView: View {
     @State private var account: Account?
+    @State private var selectedReloadAmount  = 0
     
     var body: some View {
         NavigationView {
@@ -32,7 +33,11 @@ struct ReloadFundsView: View {
                             }
                         }
 
-                    XCSelectAmountPicker()
+                    XCSelectAmountPicker(selectedReloadAmount: $selectedReloadAmount)
+                    
+                    Text("\(selectedReloadAmount)")
+                        .font(Font.custom(Fonts.Mont.bold, size: 24))
+                        .padding()
 
                     Spacer()
                     

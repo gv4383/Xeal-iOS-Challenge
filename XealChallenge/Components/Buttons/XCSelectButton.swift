@@ -11,13 +11,18 @@ struct XCSelectButton: View {
     let reloadAmount: Int
     
     @State private var isSelected = false
+    @Binding var selectedReloadAmount: Int
     
-    var overlayColor: Color {
-        isSelected ? .white : .clear
+    private var isUsingSelectedStyling: Bool {
+        isSelected && reloadAmount == selectedReloadAmount
     }
     
-    var backgroundOpacity: Double {
-        isSelected ? 0.2 : 0.1
+    private var overlayColor: Color {
+        isUsingSelectedStyling ? .white : .clear
+    }
+    
+    private var backgroundOpacity: Double {
+        isUsingSelectedStyling ? 0.2 : 0.1
     }
     
     var body: some View {
@@ -32,6 +37,13 @@ struct XCSelectButton: View {
                     .stroke(overlayColor, lineWidth: 2)
             )
             .onTapGesture {
+                if reloadAmount != selectedReloadAmount {
+                    isSelected = false
+                    selectedReloadAmount = reloadAmount
+                } else {
+                    selectedReloadAmount = 0
+                }
+                
                 isSelected.toggle()
             }
     }
@@ -39,7 +51,7 @@ struct XCSelectButton: View {
 
 struct XCSelectButton_Previews: PreviewProvider {
     static var previews: some View {
-        XCSelectButton(reloadAmount: 25)
+        XCSelectButton(reloadAmount: 25, selectedReloadAmount: .constant(25))
             .preferredColorScheme(.dark)
     }
 }
