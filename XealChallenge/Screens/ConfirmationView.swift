@@ -18,14 +18,20 @@ struct ConfirmationView: View {
             Text("$\(addedAmount) \(Copy.successfullyAdded)")
                 .font(Font.custom(Fonts.Mont.bold, size: 20))
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .navigationTitle("")
+        .navigationBarTitleDisplayMode(.inline)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+        .padding(.top, 216)
         .background(.darkPurple)
+        .ignoresSafeArea()
     }
 }
 
 struct ConfirmationView_Previews: PreviewProvider {
     static var previews: some View {
-        ConfirmationView(addedAmount: 25)
-            .preferredColorScheme(.dark)
+        NavigationView {
+            ConfirmationView(addedAmount: 25)
+                .preferredColorScheme(.dark)
+        }
     }
 }
