@@ -21,11 +21,11 @@ struct ReloadFundsView: View {
                 .ignoresSafeArea()
 
                 VStack {
-                    Text("Amanda Gonzalez")
+                    Text(account?.name ?? "")
                         .font(Font.custom(Fonts.Mont.bold, size: 24))
                         .padding()
                     
-                    XCFundsAvailableView(availableFunds: 8.10)
+                    XCFundsAvailableView(availableFunds: account?.balance ?? 0.0)
 
                     XCSelectAmountPicker()
 
@@ -38,14 +38,7 @@ struct ReloadFundsView: View {
                     
                     Button("Read tag") {
                         NFCManager.performAction(.readAccount) { account in
-                            if let account = try? account.get() {
-                                self.account = account
-                                print("ACCOUNT: \(account)")
-                                print("ACCOUNT NAME: \(account.name)")
-                                print("ACCOUNT BALANCE: \(account.balance)")
-                            } else {
-                                self.account = Account(name: "", balance: 0.0)
-                            }
+                            self.account = try? account.get()
                         }
                     }
                     .padding()
