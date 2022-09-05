@@ -31,6 +31,7 @@
 		B9DC6FCB28C0EA49009F8EEA /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC6FCA28C0EA49009F8EEA /* Color-Theme.swift */; };
 		B9DC6FCD28C1340F009F8EEA /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC6FCC28C1340F009F8EEA /* ConfirmationView.swift */; };
 		B9DC6FD128C1C3A6009F8EEA /* NFCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC6FD028C1C3A6009F8EEA /* NFCManager.swift */; };
+		B9DC6FD428C56CA0009F8EEA /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC6FD328C56C9F009F8EEA /* Account.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		B9DC6FCC28C1340F009F8EEA /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
 		B9DC6FCE28C1B961009F8EEA /* XealChallenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XealChallenge.entitlements; sourceTree = "<group>"; };
 		B9DC6FD028C1C3A6009F8EEA /* NFCManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCManager.swift; sourceTree = "<group>"; };
+		B9DC6FD328C56C9F009F8EEA /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				B933873228BD4BF2009D34A7 /* Info.plist */,
 				B933873628BD6DFA009D34A7 /* Components */,
 				B9DC6FCF28C1C389009F8EEA /* Managers */,
+				B9DC6FD228C56C7A009F8EEA /* Models */,
 				B933871928BD1202009D34A7 /* Preview Content */,
 				B933873128BD498A009D34A7 /* Screens */,
 				B933873028BD4978009D34A7 /* Support */,
@@ -218,6 +221,14 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		B9DC6FD228C56C7A009F8EEA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B9DC6FD328C56C9F009F8EEA /* Account.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -304,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9DC6FCD28C1340F009F8EEA /* ConfirmationView.swift in Sources */,
+				B9DC6FD428C56CA0009F8EEA /* Account.swift in Sources */,
 				B933871628BD11FF009D34A7 /* ReloadFundsView.swift in Sources */,
 				B933873B28BD6E81009D34A7 /* XCSelectButton.swift in Sources */,
 				B9DC6FBB28BF3C2B009F8EEA /* XCLogo.swift in Sources */,

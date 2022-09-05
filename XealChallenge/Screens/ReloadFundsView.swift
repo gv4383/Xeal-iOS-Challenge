@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ReloadFundsView: View {
+    @State private var account: Account?
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -30,12 +32,21 @@ struct ReloadFundsView: View {
                     Spacer()
                     
                     Button("Write to tag") {
-                        NFCManager.performAction(.updateAccount(accountName: "Amanda Gonzalez"))
+                        NFCManager.performAction(.updateAccount(account: Account(name: "Amanda Gonzalez", balance: 8.10)))
                     }
                     .padding()
                     
                     Button("Read tag") {
-                        NFCManager.performAction(.readAccount)
+                        NFCManager.performAction(.readAccount) { account in
+                            if let account = try? account.get() {
+                                self.account = account
+                                print("ACCOUNT: \(account)")
+                                print("ACCOUNT NAME: \(account.name)")
+                                print("ACCOUNT BALANCE: \(account.balance)")
+                            } else {
+                                self.account = Account(name: "", balance: 0.0)
+                            }
+                        }
                     }
                     .padding()
                     
