@@ -56,6 +56,7 @@ final class NFCManager: NSObject, ObservableObject {
         shared.session?.begin()
     }
     
+    // Entry point for all NFC actions
     private func read(
         tag: NFCNDEFTag,
         alertMessage: String = NFCAlertMessages.tagWasRead,
@@ -77,6 +78,7 @@ final class NFCManager: NSObject, ObservableObject {
                 self.session?.alertMessage = alertMessage
                 self.session?.invalidate()
             } else {
+                // Initialize account if there is no account data on a tag
                 let account = Account(name: "Amanda Gonzalez", balance: 8.10)
                 self.updateAccount(account: account, tag: tag)
             }
