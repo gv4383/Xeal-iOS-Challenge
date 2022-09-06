@@ -13,7 +13,7 @@
   - Write to NFC tags
 
 ## Requirements
-- iOS 15.6+
+- iOS 15.5+
 - Xcode 13.4.1
 
 ## How to run the app
