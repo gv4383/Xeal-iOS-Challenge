@@ -53,6 +53,7 @@
 		B933873A28BD6E81009D34A7 /* XCSelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSelectButton.swift; sourceTree = "<group>"; };
 		B933873D28BEA8B0009D34A7 /* XCSelectAmountPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSelectAmountPicker.swift; sourceTree = "<group>"; };
 		B933873F28BEB4EE009D34A7 /* XCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCButton.swift; sourceTree = "<group>"; };
+		B95CF95728C6C5B200FBE56F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B9C4D71228C690C1006DA16C /* purpleSpinner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = purpleSpinner.json; sourceTree = "<group>"; };
 		B9DC6FB428BF3682009F8EEA /* XCFundsAvailableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCFundsAvailableView.swift; sourceTree = "<group>"; };
 		B9DC6FBA28BF3C2B009F8EEA /* XCLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCLogo.swift; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 		B933870728BD11FF009D34A7 = {
 			isa = PBXGroup;
 			children = (
+				B95CF95728C6C5B200FBE56F /* README.md */,
 				B933871228BD11FF009D34A7 /* XealChallenge */,
 				B933871128BD11FF009D34A7 /* Products */,
 			);
